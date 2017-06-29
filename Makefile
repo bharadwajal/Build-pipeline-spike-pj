@@ -17,10 +17,10 @@ push:
 push_latest:
 	docker push $(NAME):latest
 
-run:
-  if [[ "$(docker images -q $(NAME):$(VERSION) 2> /dev/null)" == "" ]]; then
-    docker run -it $(NAME):$(VERSION) /bin/bash
-  fi
+#run:
+ # if [[ "$(docker images -q $(NAME):$(VERSION) 2> /dev/null)" == "" ]]; then
+ #   docker run -it $(NAME):$(VERSION) /bin/bash
+ # fi
 
-last_built_date:
-  docker inspect -f '{{ .Created }}' $(NAME):$(VERSION)
+#last_built_date:
+#  docker inspect -f '{{ .Created }}' $(NAME):$(VERSION)
